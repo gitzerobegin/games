@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G2 Heist Dash</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <div>
+          <p>G2</p>
+          <h1>Heist Dash</h1>
+        </div>
+        <div class="hud">
+          <span id="scenePill">Badge</span>
+          <span id="scorePill">0/1</span>
+          <span id="heartPill">III</span>
+        </div>
+      </header>
+
+      <section class="play-layout">
+        <aside class="team-panel" aria-label="Team">
+          <div class="panel-title">Team</div>
+          <div id="teamList" class="team-list"></div>
+          <button id="restartButton" class="small-button" type="button">Restart</button>
+        </aside>
+
+        <section id="arena" class="arena" tabindex="0" aria-label="Game arena">
+          <div id="sceneImage" class="scene-image"></div>
+          <div id="dangerTint" class="danger-tint"></div>
+          <div id="entities" class="entities"></div>
+          <div id="exitGate" class="exit-gate" aria-label="Exit gate">Next</div>
+          <img id="player" class="player" src="assets/commander-jiang.png" alt="Commander Jiang" />
+          <div id="toast" class="toast">Grab badge</div>
+        </section>
+
+        <aside class="mission-panel" aria-label="Mission">
+          <div class="panel-title">Mission</div>
+          <h2 id="missionTitle">Badge Night</h2>
+          <p id="missionText">Grab badge</p>
+          <div class="mini-map" aria-hidden="true">
+            <span class="map-dot active"></span>
+            <span class="map-dot"></span>
+            <span class="map-dot"></span>
+            <span class="map-dot"></span>
+            <span class="map-dot"></span>
+          </div>
+          <button id="nextButton" class="primary-button" type="button" disabled>Next</button>
+        </aside>
+      </section>
+
+      <footer class="controls" aria-label="Move">
+        <button class="move-button" type="button" data-dir="left" aria-label="Move left">&larr;</button>
+        <div class="up-down">
+          <button class="move-button" type="button" data-dir="up" aria-label="Move up">&uarr;</button>
+          <button class="move-button" type="button" data-dir="down" aria-label="Move down">&darr;</button>
+        </div>
+        <button class="move-button" type="button" data-dir="right" aria-label="Move right">&rarr;</button>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
