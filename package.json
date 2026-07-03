@@ -1,0 +1,7 @@
+{
+  "name": "games",
+  "private": true,
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.2.0"
+  }
+}
