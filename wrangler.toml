@@ -1,0 +1,8 @@
+name = "games"
+compatibility_date = "2026-07-03"
+workers_dev = false
+zone_id = "222476386e1162019bade7dab5fb38c2"
+route = "games.veyan.ai/*"
+
+[site]
+  bucket = "./heist"
