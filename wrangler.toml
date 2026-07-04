@@ -5,4 +5,12 @@ workers_dev = false
 route = "games.veyan.ai/*"
 
 [site]
-  bucket = "./heist"
+  bucket = "."
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "Room"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Room"]

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#071326" />
+    <title>Veyan Mobile Heist</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="phone-game">
+      <header class="topbar">
+        <div>
+          <p>Veyan Mobile</p>
+          <h1>Heist Dash</h1>
+          <span id="topStatus" class="top-status">Ready</span>
+        </div>
+        <div class="hud" aria-label="Game status">
+          <span id="scenePill">Badge</span>
+          <span id="scorePill">0/2</span>
+          <span id="heartPill">III</span>
+          <span id="playerPill">1P</span>
+        </div>
+      </header>
+
+      <section id="arena" class="arena" aria-label="Game arena">
+        <div id="sceneImage" class="scene-image"></div>
+        <div id="dangerTint" class="danger-tint"></div>
+        <div id="entities" class="entities"></div>
+        <div id="playersLayer" class="players-layer"></div>
+        <div id="exitGate" class="exit-gate">Next</div>
+        <div id="toast" class="toast">Join room</div>
+      </section>
+
+      <section class="mobile-panel" aria-label="Mobile controls">
+        <div class="touch-row">
+          <div id="joystick" class="joystick" aria-label="Move joystick">
+            <div id="stickKnob" class="stick-knob"></div>
+            <span>Move</span>
+          </div>
+          <div class="map-dots" aria-hidden="true">
+            <span class="map-dot active"></span>
+            <span class="map-dot"></span>
+            <span class="map-dot"></span>
+            <span class="map-dot"></span>
+            <span class="map-dot"></span>
+          </div>
+        </div>
+
+        <div id="teamList" class="team-strip" aria-label="Players"></div>
+
+        <div class="mission-card">
+          <div>
+            <p id="missionKicker">Mission</p>
+            <h2 id="missionTitle">Badge Night</h2>
+            <p id="missionText">Grab badge</p>
+          </div>
+          <button id="nextButton" class="primary-button" type="button" disabled>Next</button>
+        </div>
+
+        <div class="room-card">
+          <label>
+            <span>Name</span>
+            <input id="playerName" maxlength="16" value="Hero" />
+          </label>
+          <label>
+            <span>Room</span>
+            <input id="roomCode" maxlength="18" value="heist" />
+          </label>
+          <button id="connectButton" class="small-button" type="button">Join</button>
+          <button id="restartButton" class="small-button" type="button">Reset</button>
+          <span id="networkStatus" class="status-pill">Solo touch</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
